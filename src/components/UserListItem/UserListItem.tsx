@@ -1,7 +1,7 @@
 import React from "react";
 import { Stack, Image, Text, Grid, Center, Spacer } from "@chakra-ui/react";
 import User from "../../models/User";
-import TextInfo from "../TextInfo";
+import TextInfo from "../shared/TextInfo";
 
 interface Props {
   user: User;
