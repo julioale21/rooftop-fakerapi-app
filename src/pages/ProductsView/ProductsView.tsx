@@ -1,8 +1,10 @@
 /* eslint-disable no-console */
 import { Stack } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
+import { Text } from "@chakra-ui/layout";
 import axios from "axios";
 import Product from "../../models/Product";
+import ProducList from "../../components/products/ProducList";
 
 const productsURL = "https://fakerapi.it/api/v1/products";
 
@@ -25,7 +27,10 @@ const ProductsView: React.FC = () => {
 
   return (
     <Stack>
-      <h1>Products</h1>
+      <Text fontSize="2rem" marginY={6} textAlign="center">
+        Product List
+      </Text>
+      <ProducList products={products} />
     </Stack>
   );
 };
