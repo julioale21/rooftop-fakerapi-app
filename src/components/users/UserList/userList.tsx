@@ -9,7 +9,7 @@ interface Props {
 
 const userList: React.FC<Props> = ({ users }) => {
   return (
-    <Stack direction="column" margin={5}>
+    <Stack direction="column" margin={5} paddingX={10}>
       {users.map((user) => (
         <UserListItem key={user.uuid} user={user} />
       ))}

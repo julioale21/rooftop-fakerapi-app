@@ -1,5 +1,5 @@
 import React from "react";
-import { Stack } from "@chakra-ui/react";
+import { Stack, Text } from "@chakra-ui/react";
 import { UserList } from "../../components";
 import axios from "axios";
 import User from "../../models/User";
@@ -22,6 +22,9 @@ const UsersView: React.FC = () => {
 
   return (
     <Stack>
+      <Text fontSize="2.5rem" marginY={10}>
+        User List
+      </Text>
       <UserList users={users} />
     </Stack>
   );
