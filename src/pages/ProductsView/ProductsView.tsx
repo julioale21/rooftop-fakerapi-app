@@ -42,7 +42,7 @@ const ProductsView: React.FC = () => {
   };
 
   return (
-    <Stack>
+    <Stack width="100%">
       <Text fontSize="2rem" marginY={6} textAlign="center">
         Product List
       </Text>

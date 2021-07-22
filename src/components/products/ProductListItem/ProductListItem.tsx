@@ -12,7 +12,7 @@ const ProductListItem: React.FC<Props> = ({ product }) => {
       alignItems={{ md: "center" }}
       borderWidth={1}
       display={{ md: "flex" }}
-      margin={2}
+      marginX="auto"
       maxWidth="32rem"
       p={4}
     >
