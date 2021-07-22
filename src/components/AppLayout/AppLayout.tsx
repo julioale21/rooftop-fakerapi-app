@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../Header";
+import { Header } from "../../components";
 import "./index.css";
 
 const AppLayout: React.FC = ({ children }) => (

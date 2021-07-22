@@ -4,8 +4,7 @@ import React, { useEffect, useState } from "react";
 import { Text } from "@chakra-ui/layout";
 import axios from "axios";
 import Product from "../../models/Product";
-import ProducList from "../../components/products/ProducList";
-import Pagination from "../../components/Pagination";
+import { ProductList, Pagination } from "../../components";
 
 const productsURL = "https://fakerapi.it/api/v1/products?_quantity=100";
 
@@ -25,9 +24,7 @@ const ProductsView: React.FC = () => {
 
         setPaginatedProducts(paginatedProducts);
         setPageCount(Math.ceil(productsList.length / productsPerPage));
-        if (offset > 0) {
-          setCurrentPage(offset / productsPerPage);
-        }
+        setCurrentPage(offset / productsPerPage);
       } catch (error) {
         console.log(error);
         setPaginatedProducts([]);
@@ -49,13 +46,15 @@ const ProductsView: React.FC = () => {
       <Text fontSize="2rem" marginY={6} textAlign="center">
         Product List
       </Text>
-      <ProducList products={paginatedProducts} />
-      <Pagination
-        handleNext={handleNextPage}
-        handlePrev={handlePrevPage}
-        page={currentPage}
-        pageCount={pageCount}
-      />
+      <ProductList products={paginatedProducts} />
+      {paginatedProducts.length && (
+        <Pagination
+          handleNext={handleNextPage}
+          handlePrev={handlePrevPage}
+          page={currentPage}
+          pageCount={pageCount}
+        />
+      )}
     </Stack>
   );
 };

@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
-import AppLayout from "./components/AppLayout";
+import { AppLayout } from "./components";
 import ProductsView from "./pages/ProductsView";
 import UsersView from "./pages/UsersView";
 

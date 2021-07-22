@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Grid } from "@chakra-ui/react";
-import ProductListItem from "../ProductListItem";
+import { ProductListItem } from "../../../components";
 import Product from "../../../models/Product";
 
 interface Props {

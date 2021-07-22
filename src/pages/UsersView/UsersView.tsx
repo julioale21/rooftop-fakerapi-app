@@ -1,6 +1,6 @@
 import React from "react";
 import { Stack } from "@chakra-ui/react";
-import UserList from "../../components/UserList";
+import { UserList } from "../../components";
 import axios from "axios";
 import User from "../../models/User";
 

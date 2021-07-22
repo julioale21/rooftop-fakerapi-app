@@ -1,5 +1,5 @@
-import { Button, Stack, Text } from "@chakra-ui/react";
 import React from "react";
+import { Button, Stack, Text } from "@chakra-ui/react";
 
 interface Props {
   page: number;
@@ -11,7 +11,7 @@ interface Props {
 const Pagination: React.FC<Props> = ({ page = 0, pageCount, handleNext, handlePrev }) => {
   return (
     <Stack direction="row" justifyContent="center" paddingY={10} width="100%">
-      {page > 1 && pageCount >= page ? (
+      {page > 0 && pageCount >= page ? (
         <Button rounded="full" onClick={handlePrev}>
           Prev
         </Button>
