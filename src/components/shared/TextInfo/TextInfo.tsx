@@ -8,7 +8,7 @@ interface Props {
 
 const TextInfo: React.FC<Props> = ({ title, value }) => {
   return (
-    <Text fontSize="md" fontWeight="bold">
+    <Text fontSize={{ base: "0.5rem", md: "1rem" }} fontWeight="bold">
       {title}:
       <chakra.span fontWeight="normal" marginLeft={3}>
         {value}
